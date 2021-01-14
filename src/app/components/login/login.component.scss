@@ -1,0 +1,42 @@
+.login-container{
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .login-form{
+        background-color: white;
+        padding: 40px
+        
+    }
+}
+h2{
+    color: white;
+}
+input{
+    display: block;
+    min-width: 220px;
+    min-height: 32px;
+    margin: 5px 0 15px;
+}
+
+.centered-btn{
+    text-align: center;
+    padding-top: 10px;
+}
+
+button{
+    border: none;
+    height: 40px;
+    min-width: 90px;
+    color: white;
+    background-color: green;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    &:focus{
+        outline: none;
+    }
+}
