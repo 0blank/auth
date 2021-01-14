@@ -2,14 +2,16 @@
   <h2>Login</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
   
-    <label>
+    <label style="position: relative;">
       Email:
-      <input type="text" formControlName="email" required>
+      <input [style.border-color]="loginForm.controls['email'].invalid && isSubmitted ? 'red' : ''" type="text" formControlName="email" required>
+      <pre *ngIf="loginForm.controls['email'].invalid && isSubmitted" style="margin:0;color:red;position:absolute;top:63px;left:0;font-weight: 500;font-size: 12px;">Email is required</pre>
     </label>
   
-    <label>
+    <label style="position: relative;">
       Password:
-      <input type="password" formControlName="password" required>
+      <input [style.border-color]="loginForm.controls['password'].invalid && isSubmitted ? 'red' : ''" type="password" formControlName="password" required>
+      <pre *ngIf="loginForm.controls['password'].invalid && isSubmitted" style="margin:0;color:red;position:absolute;top:63px;left:0;font-weight: 500;font-size: 12px;">Password is required</pre>
     </label>
     <div class="centered-btn">
     <button type="submit">Login</button>

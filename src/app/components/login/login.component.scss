@@ -16,10 +16,17 @@ h2{
     color: white;
 }
 input{
+    border: none;
+    border: 1.5px solid grey;
     display: block;
     min-width: 220px;
     min-height: 32px;
     margin: 5px 0 15px;
+    border-radius: 4px;
+    padding: 0 8px;
+    &:focus{
+        outline: none;
+    }
 }
 
 .centered-btn{
