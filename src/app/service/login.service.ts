@@ -7,7 +7,8 @@ import { LoginModel } from '../models/login.model';
   providedIn: 'root'
 })
 export class LoginService {
-  private readonly URL = 'http://localhost:3000/items';
+  private readonly URL = 'https://clienta-reportservice.azurewebsites.net/identity/login';
+  // private readonly URL = 'https://clienta-reportservice.azurewebsites.net/report/getAllReports';
 
   constructor(private http:HttpClient) { }
 
